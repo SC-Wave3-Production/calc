@@ -11,6 +11,7 @@ buttons.forEach(function (entry) {
                 displayInput.value = valueA
                 return
             }
+			
             valueB += element.target.innerText
             displayInput.value = valueB
             return
