@@ -84,3 +84,13 @@ buttons.forEach(function (entry) {
     }
   });
 });
+
+document.addEventListener("keypress", function onPress(event) {
+  let key = event.key
+  const availableKeys = /(\d|\+|\-|\/|\*|\=)/
+  if (key === 'Enter') key = '='
+  if (availableKeys.test(key)) {
+    const elements = Array.from(document.querySelectorAll('.button')).filter(item => item.innerText === key)
+    elements[0].click()
+  }
+});
